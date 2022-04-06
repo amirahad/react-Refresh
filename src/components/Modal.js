@@ -5,7 +5,7 @@ export default function Modal({children, handleClose}) {
       <div className="modal">
         {children}
       </div>
-      <button onClick={handleClose}>CLOSE</button>
+      {/* <button onClick={handleClose}>CLOSE</button> */}
     </div>
   )
 }

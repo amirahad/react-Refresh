@@ -4,7 +4,8 @@ function NewEventFrom({ addEvent }) {
 
     const [title,setTitle] = useState("");
     const [date,setDate] = useState("");
-    // const [id, setId] = useState(0)
+    const [location,setLocation] = useState("Khulna")
+    const [id, setId] = useState(0)
     
     // const handleChange = (e) => {
     //     console.log(e.target.value);
@@ -13,7 +14,7 @@ function NewEventFrom({ addEvent }) {
     const resetForm = () =>{
         setTitle('')
         setDate('')
-        // setId(id+1)
+        setId(id+1)
     }
     
     const handleSubmit = (e) =>{
@@ -22,7 +23,8 @@ function NewEventFrom({ addEvent }) {
         const event = {
             title: title,
             date: date,
-            // id: setId 
+            location: location,
+            id: setId 
         }
         addEvent(event)
         // console.log(event);
@@ -52,7 +54,17 @@ function NewEventFrom({ addEvent }) {
                     value = {date}
                 />
             </label>
-            <br /> <br />
+            <br /> 
+            <label>
+                <span>Event Location: </span>
+                <select onChange={(e) => setLocation(e.target.value)}>
+                    <option value= "Khulna">Khulna</option>
+                    <option value= "Dhaka">Dhaka</option>
+                    <option value= "Rajshahi">Rajshahi</option>
+                    <option value= "Jashore">Jashore</option>
+                </select>
+            </label>
+            <br />
             <button >Submit</button><br />
             {/* <h3>{title}</h3>
             <p>{date}</p>

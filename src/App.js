@@ -31,7 +31,7 @@ function App() {
   //   setShowModal(false);
   // }
   const handleClick = (id) =>{
-    // console.log(id);
+    console.log(id);
     setEvents((prevEvents) => {
       return prevEvents.filter((event) => {
         return id !== event.id

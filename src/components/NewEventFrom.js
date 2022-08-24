@@ -42,6 +42,7 @@ function NewEventFrom({ addEvent }) {
                     type="text" 
                     onChange={(e) => setTitle(e.target.value)}
                     value = {title}
+                    required="required"
                 />
             </label>
             <br />
@@ -52,12 +53,13 @@ function NewEventFrom({ addEvent }) {
                     type="date" 
                     onChange={(e) => setDate(e.target.value)} 
                     value = {date}
+                    required="required"
                 />
             </label>
             <br /> 
             <label>
                 <span>Event Location: </span>
-                <select onChange={(e) => setLocation(e.target.value)}>
+                <select onChange={(e) => setLocation(e.target.value)} required="required">
                     <option value= "Khulna">Khulna</option>
                     <option value= "Dhaka">Dhaka</option>
                     <option value= "Rajshahi">Rajshahi</option>
